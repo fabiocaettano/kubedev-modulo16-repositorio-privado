@@ -22,7 +22,7 @@
 <p>O plano gratuiro oferece 500MB de espaço, quando da elaboração desse documento.</p>
 
 
-1. <b>Instalar doctl</b>
+<p>1. <b>Instalar doctl</b></p>
 
 <p>O doctl é um CLI , onde permite interagir com a API da Digital Ocean (criar, configurar e destruir recursos).</p>
 
@@ -49,12 +49,12 @@ $ doctl auth init
 Enter Your Access Token: """Colar o Token"""
 ```
 
-3. Logar:
+<p>3. <b>Logar</b></p>
 ``` bash
 $ docker login registry.digitalocean.com
 ```
 
-4. Para verificar a conta ativa:
+<p>4. <b>Para verificar a conta ativa:</b></p>
 ``` bash
 $ doctl account get
 ```
