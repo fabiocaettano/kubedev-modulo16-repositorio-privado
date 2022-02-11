@@ -46,7 +46,7 @@ $ sudo mv ~/doctl /usr/local/bin
 <p>No prompt do Ubuntu executar:</p>
 ``` bash
 $ doctl auth init
-Enter Your Access Token: """Colar o Token"""
+Enter Your Access Token: Colar o Token
 ```
 
 <p>3. <b>Logar</b></p>
@@ -60,7 +60,7 @@ $ doctl account get
 ```
 
 
-<h2>Upload da Imagem</h2>
+<h2 style="font-color:blue">Upload da Imagem</h2>
 
 Usar o comando docker tag:
 ``` bash
