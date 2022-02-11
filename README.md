@@ -26,7 +26,8 @@
 
 <p>O doctl é um CLI , onde permite interagir com a API da Digital Ocean (criar, configurar e destruir recursos).</p>
 
-<p>Instruções para instalar o doctl no Ubuntu</p>:
+<p>Instruções para instalar o doctl no Ubuntu:</p>
+
 ``` bash
 $ cd ~ wget https://github.com/digitalocean/doctl/releases/download/v1.70.0/doctl-1.70.0-linux-amd64.tar.gz
 
