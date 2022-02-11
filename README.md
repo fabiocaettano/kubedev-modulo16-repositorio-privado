@@ -22,7 +22,7 @@
 <p>O plano gratuiro oferece 500MB de espaço, quando da elaboração desse documento.</p>
 
 
-1. <b>Inslalar doctl</b>
+1. <b>Instalar doctl</b>
 
 <p>O doctl é um CLI , onde permite interagir com a API da Digital Ocean (criar, configurar e destruir recursos).</p>
 
@@ -37,12 +37,13 @@ $ sudo mv ~/doctl /usr/local/bin
 ``` 
 
 
-2. <b>Gerar Token e Autenticar</b>
+<p>2. <b>Gerar Token e Autenticar</b></p>
 
 <p>Acessar o site da Digital Ocean para gerar o Token.</p>
+
 <p>Utilizar o "Menu API >> Botão Generate New Token >> Copiar o token".</p>
 
-No prompt do Ubuntu executar:
+<p>No prompt do Ubuntu executar:</p>
 ``` bash
 $ doctl auth init
 Enter Your Access Token: """Colar o Token"""
