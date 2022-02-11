@@ -3,7 +3,8 @@
 <h1>​Coloque a imagem da sua API em um Docker Hub privado</h1>
 
 <h2>Ambiente de Desenvolvimento:</h2>
-1. Ferramentas:
+
+1. Ferramentas
 * Windows 10 Pro;
 * WSL 2;
 * Ubuntu 20.4;
