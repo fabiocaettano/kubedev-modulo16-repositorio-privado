@@ -1,6 +1,6 @@
 <h1>Kubedev - Modulo 16 - Exercicio</h1>
 
-<h1>​Coloque a imagem da sua API em um Docker Hub privado</h1>
+<h1>Coloque a imagem da sua API em um Docker Hub privado</h1>
 
 <h2>Ambiente de Desenvolvimento:</h2>
 
@@ -17,16 +17,14 @@
 
 
 <h2>Repositório Privado</h2>
-<span>O repositório privado utilizado é o da Digital Ocean</span>
-
-1. Acessar o site da Digital Oceal e utilizar a opção Container Registry para habilitar este serviço.
-Será necessário escolher um plano.
-O plano gratuiro oferece 500MB de espaço, quando da elaboração desse documento.
+<p>O repositório privado utilizado é o da Digital Ocean.</p>
+<p>No site utilizar a opção Container Registry para habilitar este serviço.</p>
+<p>O plano gratuiro oferece 500MB de espaço, quando da elaboração desse documento.</p>
 
 
-2.  Inslalar doctl
+1.  Inslalar doctl
 
-O doctl é um CLI , onde permite interagir com a API da Digital Ocean (criar, configurar e destruir recursos).
+<p>O doctl é um CLI , onde permite interagir com a API da Digital Ocean (criar, configurar e destruir recursos).</p>
 
 Prompt do Ubuntu:
 ``` bash
