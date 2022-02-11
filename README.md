@@ -2,9 +2,9 @@
 
 <h2>​Coloque a imagem da sua API em um Docker Hub privado</h2>
 
-<h3>Ambiente:</h3>
-- Windows 10 Pro;
-- WSL 2;
+1. Ambiente:
+* Windows 10 Pro;
+* WSL 2;
 - Ubuntu 20.4;
 - Visual Studio Code;
 - Api para o teste.
