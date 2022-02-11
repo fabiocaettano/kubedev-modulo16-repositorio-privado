@@ -4,7 +4,7 @@
 
 <h2>Ambiente de Desenvolvimento:</h2>
 
-1. Ferramentas
+<p>1. Ferramentas</p>
 * Windows 10 Pro;
 * WSL 2;
 * Ubuntu 20.4;
