@@ -61,6 +61,7 @@ $ docker login registry.digitalocean.com
 ```
 
 <p>4. <b>Para verificar a conta ativa:</b></p>
+
 ``` bash
 $ doctl account get
 ```
@@ -69,17 +70,18 @@ $ doctl account get
 <h2>Upload da Imagem</h2>
 
 <p>1. <b>Usar o comando docker tag:</b></p>
+
 ``` bash
 $ docker tag fabiocaettano74/api-cadastro-usuario-production:v01 registry.digitalocean.com/fabiocaettano74/api-cadastro-usuario-production:v01
 ```
 
 <p>2. <b>Usar o comando docker push para enviar a imagem para o repositório privado:</b></p>
+
 ``` bash
 $ docker push registry.digitalocean.com/fabiocaettano74/api-cadastro-usuario-production:v01
 ``` 
 
 <p>No site da Digital Ocean no menu Container Register é possivel visualizar a imagem.</p>
-
 
 
 <h2> Secret </h2>
@@ -88,14 +90,17 @@ $ docker push registry.digitalocean.com/fabiocaettano74/api-cadastro-usuario-pro
 
 
 <p>1. <b>Criar o secret para que o pod consiga acessar o repositório privado:</b></p>
+
 ``` bash
 $ kubectl create secret docker-registry do-registry --docker-server=registry.digitalocean.com/fabiocaettano74 --docker-username=token --docker-password=token --docker-email=fabio.caettano74@gmail.com -n production
 ```
+
 - O do-registry é o nome do Secret.
 - O docker-server é composto registry.digitalocean.com/nomeDoRepositorio;
 - Nos parametros docker-username e docker-password informe o token gerado pelo site da digital ocean;
 
 <p>2. <b>Visualizar o secret:</b></p>
+
 ``` bash
 $ kubectl get secrets do-registry --output=yaml -n production
 ```
@@ -104,6 +109,7 @@ $ kubectl get secrets do-registry --output=yaml -n production
 <h2> Deployment </h2>
 
 <p>1. <b>Na chave image informe a imagem do repositório privado:</b></p>
+
 ``` yaml
 spec:       
       containers:
@@ -120,4 +126,3 @@ spec:
         - name: do-registry
 ```
 
-Aplicar as alterações do deployment.
