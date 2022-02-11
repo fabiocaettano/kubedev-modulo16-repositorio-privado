@@ -60,7 +60,7 @@ $ doctl account get
 ```
 
 
-<h2 style="font-color:blue">Upload da Imagem</h2>
+<h2>Upload da Imagem</h2>
 
 Usar o comando docker tag:
 ``` bash
