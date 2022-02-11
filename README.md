@@ -1,22 +1,21 @@
 <h1>Kubedev - Modulo 16 - Exercicio</h1>
 
-<h2>​Coloque a imagem da sua API em um Docker Hub privado</h2>
+<h1>​Coloque a imagem da sua API em um Docker Hub privado</h1>
 
-1. Ambiente:
+<h2>Ambiente de Desenvolvimento:</h2>
+1. Ferramentas:
 * Windows 10 Pro;
 * WSL 2;
-- Ubuntu 20.4;
-- Visual Studio Code;
-- Api para o teste.
-- Docker;
-- Kubernetes;
-- doctl;
-- Cadastro na Digital Ocean.
+* Ubuntu 20.4;
+* Visual Studio Code;
+* Api para o teste.
+* Docker;
+* Kubernetes;
+* doctl;
+* Cadastro na Digital Ocean.
 
-<hr>
 
-<hr>
-
+<h2>Repositório Privado</h2>
 <span>O repositório privado utilizado é o da Digital Ocean</span>
 
 1. Acessar o site da Digital Oceal e utilizar a opção Container Registry para habilitar este serviço.
