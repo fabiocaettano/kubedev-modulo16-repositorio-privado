@@ -48,12 +48,14 @@ $ sudo mv ~/doctl /usr/local/bin
 <p>Utilizar o "Menu API >> Botão Generate New Token >> Copiar o token".</p>
 
 <p>No prompt do Ubuntu executar:</p>
+
 ``` bash
 $ doctl auth init
 Enter Your Access Token: Colar o Token
 ```
 
 <p>3. <b>Logar</b></p>
+
 ``` bash
 $ docker login registry.digitalocean.com
 ```
