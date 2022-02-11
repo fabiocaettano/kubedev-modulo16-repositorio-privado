@@ -4,7 +4,7 @@
 
 <h2>Ambiente de Desenvolvimento:</h2>
 
-<p>1. Ferramentas</p>
+1. Ferramentas
 * Windows 10 Pro;
 * WSL 2;
 * Ubuntu 20.4;
@@ -22,7 +22,7 @@
 <p>O plano gratuiro oferece 500MB de espaço, quando da elaboração desse documento.</p>
 
 
-1. Inslalar doctl
+1. <b>Inslalar doctl</b>
 
 <p>O doctl é um CLI , onde permite interagir com a API da Digital Ocean (criar, configurar e destruir recursos).</p>
 
@@ -37,7 +37,7 @@ $ sudo mv ~/doctl /usr/local/bin
 ``` 
 
 
-2. Gerar Token e Autenticar
+2. <b>Gerar Token e Autenticar</b>
 
 <p>Acessar o site da Digital Ocean para gerar o Token.</p>
 <p>Utilizar o "Menu API >> Botão Generate New Token >> Copiar o token".</p>
