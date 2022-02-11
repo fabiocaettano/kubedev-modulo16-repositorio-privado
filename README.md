@@ -22,11 +22,11 @@
 <p>O plano gratuiro oferece 500MB de espaço, quando da elaboração desse documento.</p>
 
 
-1.  Inslalar doctl
+1. Inslalar doctl
 
 <p>O doctl é um CLI , onde permite interagir com a API da Digital Ocean (criar, configurar e destruir recursos).</p>
 
-Prompt do Ubuntu:
+<p>Instruções para instalar o doctl no Ubuntu</p>:
 ``` bash
 $ cd ~ wget https://github.com/digitalocean/doctl/releases/download/v1.70.0/doctl-1.70.0-linux-amd64.tar.gz
 
@@ -36,29 +36,29 @@ $ sudo mv ~/doctl /usr/local/bin
 ``` 
 
 
-3. Gerar Token e Autenticar
+2. Gerar Token e Autenticar
 
-Para gerar o Token acessar a página da Digital Ocean, e:
-"Menu API >> Botão Generate New Token >> Copiar o token".
+<p>Acessar o site da Digital Ocean para gerar o Token.</p>
+<p>Utilizar o "Menu API >> Botão Generate New Token >> Copiar o token".</p>
 
-No prompt do Ubuntu:
+No prompt do Ubuntu executar:
 ``` bash
 $ doctl auth init
 Enter Your Access Token: """Colar o Token"""
 ```
 
-Logar:
+3. Logar:
 ``` bash
 $ docker login registry.digitalocean.com
 ```
 
-Para verificar a conta ativa:
+4. Para verificar a conta ativa:
 ``` bash
 $ doctl account get
 ```
 
 
-4. Upload da Imagem
+<h2>Upload da Imagem</h2>
 
 Usar o comando docker tag:
 ``` bash
