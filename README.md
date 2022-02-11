@@ -18,11 +18,13 @@
 
 <h2>Repositório Privado</h2>
 <p>O repositório privado utilizado é o da Digital Ocean.</p>
+
+<p>1. <b>Container Registry</b></p>
 <p>No site utilizar a opção Container Registry para habilitar este serviço.</p>
 <p>O plano gratuiro oferece 500MB de espaço, quando da elaboração desse documento.</p>
 
 
-<p>1. <b>Instalar doctl</b></p>
+<p>2. <b>Instalar doctl</b></p>
 
 <p>O doctl é um CLI , onde permite interagir com a API da Digital Ocean (criar, configurar e destruir recursos).</p>
 
@@ -41,7 +43,7 @@ $ sudo mv ~/doctl /usr/local/bin
 ``` 
 
 
-<p>2. <b>Gerar Token e Autenticar</b></p>
+<p>3. <b>Gerar Token e Autenticar</b></p>
 
 <p>Acessar o site da Digital Ocean para gerar o Token.</p>
 
@@ -54,13 +56,13 @@ $ doctl auth init
 Enter Your Access Token: Colar o Token
 ```
 
-<p>3. <b>Logar</b></p>
+<p>4. <b>Logar</b></p>
 
 ``` bash
 $ docker login registry.digitalocean.com
 ```
 
-<p>4. <b>Para verificar a conta ativa:</b></p>
+<p>5. <b>Para verificar a conta ativa:</b></p>
 
 ``` bash
 $ doctl account get
@@ -69,19 +71,21 @@ $ doctl account get
 
 <h2>Upload da Imagem</h2>
 
-<p>1. <b>Usar o comando docker tag:</b></p>
+<p>1. <b>Docker tag</b></p>
 
 ``` bash
 $ docker tag fabiocaettano74/api-cadastro-usuario-production:v01 registry.digitalocean.com/fabiocaettano74/api-cadastro-usuario-production:v01
 ```
 
-<p>2. <b>Usar o comando docker push para enviar a imagem para o repositório privado:</b></p>
+<p>2. <b>Docker push</b></p>
+
+<p>Usar o comando docker push para enviar a imagem para o repositório privado:</p>
 
 ``` bash
 $ docker push registry.digitalocean.com/fabiocaettano74/api-cadastro-usuario-production:v01
 ``` 
 
-<p>No site da Digital Ocean no menu Container Register é possivel visualizar a imagem.</p>
+<p>No menu Container Register , no site da Digital Ocean,  é possivel visualizar a imagem.</p>
 
 
 <h2> Secret </h2>
@@ -89,7 +93,7 @@ $ docker push registry.digitalocean.com/fabiocaettano74/api-cadastro-usuario-pro
 <p>Mas para o pod utilizar a imagem é necessário uma autenticação, por tratar-se de um container privado.</p>
 
 
-<p>1. <b>Criar o secret para que o pod consiga acessar o repositório privado:</b></p>
+<p>1. <b>Criar o Secret</b></p>
 
 ``` bash
 $ kubectl create secret docker-registry do-registry --docker-server=registry.digitalocean.com/fabiocaettano74 --docker-username=token --docker-password=token --docker-email=fabio.caettano74@gmail.com -n production
@@ -99,7 +103,7 @@ $ kubectl create secret docker-registry do-registry --docker-server=registry.dig
 - O docker-server é composto registry.digitalocean.com/nomeDoRepositorio;
 - Nos parametros docker-username e docker-password informe o token gerado pelo site da digital ocean;
 
-<p>2. <b>Visualizar o secret:</b></p>
+<p>2. <b>Visualizar o Secret</b></p>
 
 ``` bash
 $ kubectl get secrets do-registry --output=yaml -n production
@@ -108,7 +112,7 @@ $ kubectl get secrets do-registry --output=yaml -n production
 
 <h2> Deployment </h2>
 
-<p>1. <b>Na chave image informe a imagem do repositório privado:</b></p>
+<p>Na chave image informe a imagem do repositório privado:</p>
 
 ``` yaml
 spec:       
@@ -117,7 +121,7 @@ spec:
         image: registry.digitalocean.com/fabiocaettano74/api-cadastro-usuario-production:v02
 ```
 
-<p>2. <b>Incluir no manifesto a chave imagePullSecretes, e na chave name informe o nome do Secret.</b></p>
+<p>Incluir no manifesto a chave imagePullSecretes, e na chave name informe o nome do Secret:</p>
 
 ``` yaml
 spec:       
